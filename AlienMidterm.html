@@ -102,19 +102,30 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 	</div>
 	<tw-storydata name="Alien Midterm" startnode="1" creator="Twine" creator-version="2.3.5" ifid="ECDCB054-58EB-456F-AB2D-2E79D723DC0F" zoom="1" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">main {
   font-size: 16px;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="367,48" size="100,100">Your name is Jimmy the Alien. Your UFO lands in a field outside of Area 51. You have been sent to Earth on a mission to rescue your alien friend, who crash landed and was locked up inside the prison of Area 51. What do you want to do?
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="367,48" size="100,100">&lt;&lt;set $score to 0&gt;&gt;
+Score: &lt;&lt;print $score&gt;&gt;
 
-&lt;img src = &quot;data:image/png;base64,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&quot; width = &quot;70%&quot; /&gt;
+Your name is Jimmy the Alien. Your UFO lands in a field outside of Area 51. You have been sent to Earth on a mission to rescue your alien friend, who crash landed and was locked up inside the prison of Area 51. What do you want to do?
+
+&lt;img src = &quot;http://clipart-library.com/images/ziXeRxMAT.jpg&quot; width = &quot;70%&quot; /&gt;
 
 - [[Try the front entrance]]
-- [[Look for a side or back entrance]]</tw-passagedata><tw-passagedata pid="2" name="hide in a storage closet" tags="" position="417,487" size="100,100">You find a scrap of paper on the floor with the word &quot;password&quot; written on it. You hold onto it because you think it could be useful.
+- [[Look for a side or back entrance][$score += 10]]
+
+
+
+</tw-passagedata><tw-passagedata pid="2" name="hide in a storage closet" tags="" position="417,487" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
+
+You find a scrap of paper on the floor with the word &quot;password&quot; written on it. You hold onto it because you think it could be useful.
 
 Suddently you hear voices outside of the door. You look around and see an air duct you just might fit into. What do you do?
 
 &lt;img src = &quot;https://media.giphy.com/media/AphxZxXiVklYQ/giphy.gif&quot; /&gt;
 
-- [[Climb into the air duct]]
-- [[Wait for the guards to move away from the door]]</tw-passagedata><tw-passagedata pid="3" name="try to run away from the footsteps" tags="javascript" position="700,502" size="100,100">You try running around the corner and come face to face with a group of guards! You have to make a quick decision...
+- [[Climb into the air duct][$score += 10]]
+- [[Wait for the guards to move away from the door]]</tw-passagedata><tw-passagedata pid="3" name="try to run away from the footsteps" tags="javascript" position="700,502" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
+
+You try running around the corner and come face to face with a group of guards! You have to make a quick decision...
 
 &lt;img src = &quot;https://media.istockphoto.com/vectors/funny-green-alien-running-somewhere-vector-id531979310&quot; width = &quot;60%&quot; /&gt;
 
@@ -126,57 +137,83 @@ Suddently you hear voices outside of the door. You look around and see an air du
 		&lt;&lt;goto &quot;caught1&quot;&gt;&gt;
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;/link&gt;&gt;	
-</tw-passagedata><tw-passagedata pid="4" name="Try the front entrance" tags="" position="70,198" size="100,100">The guards at the front recognizes you as an alien immediately. They attack you immediately. Probably not the best idea to walk right up to the front, huh?
+</tw-passagedata><tw-passagedata pid="4" name="Try the front entrance" tags="" position="70,198" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
+
+The guards at the front recognizes you as an alien immediately. They attack you immediately. Probably not the best idea to walk right up to the front, huh?
 
 &lt;img src = &quot;https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/guilty-alien-similar-alien.jpg&quot; width=&quot;60%&quot; /&gt;
 
-[[You got caught-&gt;caught]] </tw-passagedata><tw-passagedata pid="5" name="Look for a side or back entrance" tags="" position="554,177" size="100,100">You find a side entrance, and surprisingly it is unlocked! Suddenly you hear footsteps coming. Do you 
+[[You got caught-&gt;caught]] </tw-passagedata><tw-passagedata pid="5" name="Look for a side or back entrance" tags="" position="554,177" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
 
-- [[hide in a storage closet]] 
-- [[try to run away from the footsteps]] </tw-passagedata><tw-passagedata pid="6" name="Climb into the air duct" tags="" position="314,622" size="100,100">You come out of the air duct into a security room. There is a alarm panel that looks important. 
+You find a side entrance, and surprisingly it is unlocked! Suddenly you hear footsteps coming. Do you 
+
+- [[hide in a storage closet][$score += 10]] 
+- [[try to run away from the footsteps]]
+
+</tw-passagedata><tw-passagedata pid="6" name="Climb into the air duct" tags="" position="314,622" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
+
+You come out of the air duct into a security room. There is a alarm panel that looks important. 
 
 &lt;img src = &quot;https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSUHW0b5MbmBoS6y3kSEfEgMNXGlrJxO1AFfg2HdMsER6o25H5p&quot; width = &quot;40%&quot; /&gt;
 
--[[open the alarm panel]]</tw-passagedata><tw-passagedata pid="7" name="Wait for the guards to move away from the door" tags="" position="546,623" size="100,100">The guard ends up coming into the closet and busting you! 
-- [[Return to Start-&gt;Start]]</tw-passagedata><tw-passagedata pid="8" name="open the alarm panel" tags="javascript" position="291,765" size="100,100">&quot;Alarm sequence initated. Code red will be initiated in 10 seconds&quot;
+-[[open the alarm panel][$score += 10]]</tw-passagedata><tw-passagedata pid="7" name="Wait for the guards to move away from the door" tags="" position="546,623" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
+
+The guard ends up coming into the closet and busting you! 
+- [[Return to Start-&gt;Start]]</tw-passagedata><tw-passagedata pid="8" name="open the alarm panel" tags="javascript" position="291,765" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
+
+&quot;Alarm sequence initated. Code red will be initiated in 10 seconds&quot;
 
 &lt;img src = &quot;https://clipartmag.com/images/alarm-clipart-31.png&quot; width= &quot;20%&quot;/&gt;
 
 You need to shut off the alarm!
 Cut the
 -[[blue wire]]
--[[red wire]]
+-[[red wire][$score += 10]]
 
 
 &lt;&lt;timed 10s&gt;&gt;
 	&lt;&lt;goto &quot;caught2&quot;&gt;&gt;
 &lt;&lt;/timed&gt;&gt;	
-	</tw-passagedata><tw-passagedata pid="9" name="blue wire" tags="" position="408,915" size="100,100">Uh-oh. You chose the wrong wire. The alarm started blaring and guards busted in and caught you.
+	</tw-passagedata><tw-passagedata pid="9" name="blue wire" tags="" position="408,915" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
+
+Uh-oh. You chose the wrong wire. The alarm started blaring and guards busted in and caught you.
 
 &lt;img src = &quot;https://media1.giphy.com/media/xT5LMzoDHgpoFW7b0c/giphy.gif&quot; width=&quot;70%&quot; /&gt; 
 
-- [[Return to Start-&gt;Start]]</tw-passagedata><tw-passagedata pid="10" name="red wire" tags="" position="187,911" size="100,100">The sequence ends and the alarm shuts off. You sneak back into the hallway and near the prison cell area. Do you 
+- [[Return to Start-&gt;Start]]</tw-passagedata><tw-passagedata pid="10" name="red wire" tags="" position="187,911" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
+
+The sequence ends and the alarm shuts off. You sneak back into the hallway and near the prison cell area. Do you 
 
 &lt;img src = &quot;https://www.fairfaxcounty.gov/news2/wp-content/uploads/2016/12/Jail-Minimum-Security-Cell-Dayroom-1.jpg&quot; width=&quot;60%&quot; /&gt;
 
-- [[try and find a way to sneak in]]
-- [[barge in and find a way to deal with the guards]]</tw-passagedata><tw-passagedata pid="11" name="try and find a way to sneak in" tags="" position="158,1044" size="100,100">You approach the guard lunch room. You see two guards, one watching TV with a keycard on his belt, and one asleep in a chair, whose keycard is probably in his pocket. Which one do you try and pickpocket?
+- [[try and find a way to sneak in][$score += 10]]
+- [[barge in and find a way to deal with the guards][$score += 10]]</tw-passagedata><tw-passagedata pid="11" name="try and find a way to sneak in" tags="" position="158,1044" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
+
+You approach the guard lunch room. You see two guards, one watching TV with a keycard on his belt, and one asleep in a chair, whose keycard is probably in his pocket. Which one do you try and pickpocket?
 
 - [[Guard watching TV]]
-- [[Guard sleeping]]</tw-passagedata><tw-passagedata pid="12" name="barge in and find a way to deal with the guards" tags="" position="456,1055" size="100,100">You come face to face with a bunch of armed guards. Do you 
+- [[Guard sleeping][$score += 10]]</tw-passagedata><tw-passagedata pid="12" name="barge in and find a way to deal with the guards" tags="" position="456,1055" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
+
+You come face to face with a bunch of armed guards. Do you 
 
 &lt;img src = &quot;https://www.pinclipart.com/picdir/middle/275-2753470_cartoon-security-guard-clipart-png-download.png&quot; width=&quot;70%&quot;/&gt;
 
-- [[look for a weapon to defend yourself]]
-- [[try and run through them to reach the cell area door]]</tw-passagedata><tw-passagedata pid="13" name="look for a weapon to defend yourself" tags="" position="405,1212" size="100,100">You find a stun gun and disable several of the guards. Now you approach the cell area door.
+- [[look for a weapon to defend yourself][$score += 10]]
+- [[try and run through them to reach the cell area door]]</tw-passagedata><tw-passagedata pid="13" name="look for a weapon to defend yourself" tags="" position="405,1212" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
+
+You find a stun gun and disable several of the guards. Now you approach the cell area door.
 
 &lt;img src = &quot;https://cdn1.iconfinder.com/data/icons/police-11/500/SingleCartoonPoliceYulia_14-512.png&quot; width=&quot;70%&quot;/&gt;
 
 - [[next-&gt;cell area door]]
 
-</tw-passagedata><tw-passagedata pid="14" name="try and run through them to reach the cell area door" tags="" position="633,1213" size="100,100">The guards catch you with ease. 
+</tw-passagedata><tw-passagedata pid="14" name="try and run through them to reach the cell area door" tags="" position="633,1213" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
 
-- [[return to start-&gt;Start]]</tw-passagedata><tw-passagedata pid="15" name="cell area door" tags="javascript" position="318,1389" size="100,100">You face a giant metal door guarding the area containing all of the prison cells. A computer sits to the side of the door, locked with a password. 
+The guards catch you with ease. 
+
+- [[return to start-&gt;Start]]</tw-passagedata><tw-passagedata pid="15" name="cell area door" tags="javascript" position="318,1389" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
+
+You face a giant metal door guarding the area containing all of the prison cells. A computer sits to the side of the door, locked with a password. 
 
 &lt;img src = &quot;https://www.howtogeek.com/wp-content/uploads/2014/04/enter-bios-password-at-boot.jpg&quot; width=&quot;80%&quot;/&gt;
 
@@ -184,51 +221,79 @@ Cut the
 Code:
 - [[area51-&gt;wrong password]]
 - [[aliens-&gt;wrong password]]
-- [[password-&gt;Start of prison]]</tw-passagedata><tw-passagedata pid="16" name="Guard watching TV" tags="" position="52,1200" size="100,100">The guard feels you trying to pickpocket him and alerts the other guards!
+- [[password-&gt;Start of prison][$score += 10]]</tw-passagedata><tw-passagedata pid="16" name="Guard watching TV" tags="" position="52,1200" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
 
-- [[next -&gt;barge in and find a way to deal with the guards]] </tw-passagedata><tw-passagedata pid="17" name="Guard sleeping" tags="" position="226,1199" size="100,100">You successfully pickpocket the sleeping guard and find the keycard in his wallet. You sneak out of the cafeteria and reach the room right before the prison cell area.
+The guard feels you trying to pickpocket him and alerts the other guards!
+
+- [[next -&gt;barge in and find a way to deal with the guards]] </tw-passagedata><tw-passagedata pid="17" name="Guard sleeping" tags="" position="226,1199" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
+
+You successfully pickpocket the sleeping guard and find the keycard in his wallet. You sneak out of the cafeteria and reach the room right before the prison cell area.
 
 &lt;img src = &quot;https://media.istockphoto.com/vectors/security-guard-vector-id115454482?k=6&amp;m=115454482&amp;s=612x612&amp;w=0&amp;h=8YGRzG_sXCist4BzAR2Ax3EgEOU8UO6Dz0hrC_N10Jg=&quot; width=&quot;70%&quot;/&gt;
 
 - [[next -&gt;cell area door]]
 
-</tw-passagedata><tw-passagedata pid="18" name="Start of prison" tags="" position="318,1539" size="100,100">You enter the maze-like prison. Which direction do you choose?
+</tw-passagedata><tw-passagedata pid="18" name="Start of prison" tags="" position="318,1539" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
 
-- [[Left]]
-- [[Right-&gt;Dead end]]</tw-passagedata><tw-passagedata pid="19" name="Left" tags="" position="191,1677" size="100,100">You head deeper into the prison. Where do you turn now?
+You enter the maze-like prison. Which direction do you choose?
+
+- [[Left][$score += 10]]
+- [[Right-&gt;Dead end]]</tw-passagedata><tw-passagedata pid="19" name="Left" tags="" position="191,1677" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
+
+You head deeper into the prison. Where do you turn now?
 
 - [[Left-&gt;Dead end]]
-- [[Right]]</tw-passagedata><tw-passagedata pid="20" name="Dead end" tags="" position="480,1678" size="100,100">You reach a dead end.
+- [[Right][$score += 10]]</tw-passagedata><tw-passagedata pid="20" name="Dead end" tags="" position="480,1678" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
 
-- [[Click here to turn back-&gt;Start of prison]] </tw-passagedata><tw-passagedata pid="21" name="Right" tags="" position="269,1821" size="100,100">It looks like you&#39;re almost at the heart of the prison. Which way do you want to go now?
+You reach a dead end.
 
-- [[Left-&gt;end of maze]]
-- [[Right-&gt;Dead end]]</tw-passagedata><tw-passagedata pid="22" name="end of maze" tags="" position="269,1971" size="100,100">You&#39;ve finally reached your friend&#39;s cell! He is delighted to see you through the glass, and you use the keycard you picked off the guard to open the door. 
+- [[Click here to turn back-&gt;Start of prison]] </tw-passagedata><tw-passagedata pid="21" name="Right" tags="" position="269,1821" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
 
-Now you have to escape Area 51. Your friend says that while he was blindfolded coming in, he knows an easy way out. Do you
+It looks like you&#39;re almost at the heart of the prison. Which way do you want to go now?
 
-- [[follow your friend]]
-- [[lead the way yourself]]</tw-passagedata><tw-passagedata pid="23" name="follow your friend" tags="" position="149,2140" size="100,100">Your friend takes you through the maze of Area 51 hallways until you find an exit! You both hurry outside and sprint to the UFO. The ship takes off and you both return home safe and happy! 
+- [[Left-&gt;end of maze][$score += 10]]
+- [[Right-&gt;Dead end]]</tw-passagedata><tw-passagedata pid="22" name="end of maze" tags="" position="269,1971" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
+
+You&#39;ve finally reached your friend&#39;s cell! He is delighted to see you through the glass, and you use the keycard you picked off the guard to open the door. 
+
+Now you have to escape Area 51. Your friend says that while he was blindfolded coming in, he thinks he knows an easy way out. Do you
+
+- [[follow your friend][$score += 10]]
+- [[lead the way yourself]]</tw-passagedata><tw-passagedata pid="23" name="follow your friend" tags="" position="149,2140" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
+
+Your friend takes you through the maze of Area 51 hallways until you find an exit! You both hurry outside and sprint to the UFO. The ship takes off and you both return home safe and happy! 
 
 &lt;h2&gt; Congrats! &lt;/h2&gt;
 
 &lt;img src = &quot;https://previews.123rf.com/images/alphaspirit/alphaspirit1702/alphaspirit170200097/73032607-winner-woman-runner-on-the-finish-line.jpg&quot; width=&quot;30%&quot; /&gt;
 
-[[Click here to play again-&gt;Start]]</tw-passagedata><tw-passagedata pid="24" name="lead the way yourself" tags="" position="399,2136" size="100,100">You end up getting lost in Area 51. You guys survive on radioactive waste and cheese doodles for a few days, but can&#39;t find your way out.
+[[Click here to play again-&gt;Start]]</tw-passagedata><tw-passagedata pid="24" name="lead the way yourself" tags="" position="399,2136" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
+
+You end up getting lost in Area 51. You guys survive on radioactive waste and cheese doodles for a few days, but can&#39;t find your way out.
 
 &lt;img src = &quot;https://images.freeimages.com/images/premium/previews/6673/6673600-lost-aliens.jpg&quot; width=&quot;70%&quot;/&gt;
 
-[[Start over-&gt;Start]]</tw-passagedata><tw-passagedata pid="25" name="caught" tags="" position="870,133" size="100,100">You&#39;ve been caught red-handed. 
+[[Start over-&gt;Start]]</tw-passagedata><tw-passagedata pid="25" name="caught" tags="" position="870,133" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
+
+You&#39;ve been caught red-handed. 
 
 &lt;img src = &quot;https://i2.wp.com/walkingeaglenews.com/wp-content/uploads/2018/11/security-guard.jpg?fit=1080%2C642&amp;ssl=1&quot; width = &quot;60%&quot; /&gt;
 
-[[Click here to start over-&gt;Start]]</tw-passagedata><tw-passagedata pid="26" name="in time" tags="" position="752,359" size="100,100">You made it away in time. Maybe try a different option?
+[[Click here to start over-&gt;Start]]</tw-passagedata><tw-passagedata pid="26" name="in time" tags="" position="752,359" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
+
+You made it away in time. Maybe try a different option?
 
 &lt;img src = &quot;https://www.zoro.com/static/cms/product/large/Z1JAy0fo9oy.JPG&quot; width=&quot;60%&quot; /&gt;
 
-[[Next-&gt;Look for a side or back entrance]] </tw-passagedata><tw-passagedata pid="27" name="caught1" tags="" position="891,444" size="100,100">[[You didn&#39;t make it in time-&gt;caught]] </tw-passagedata><tw-passagedata pid="28" name="caught2" tags="" position="33,744" size="100,100">You didn&#39;t choose fast enough. The alarm went off and guards flooded to find you. 
+[[Next-&gt;Look for a side or back entrance]] </tw-passagedata><tw-passagedata pid="27" name="caught1" tags="" position="891,444" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
 
-[[Uh-oh-&gt;caught]]</tw-passagedata><tw-passagedata pid="29" name="wrong password" tags="" position="489,1383" size="100,100">You didn&#39;t choose the correct password. The alarm goes off and the guards bust you.
+[[You didn&#39;t make it in time-&gt;caught]] </tw-passagedata><tw-passagedata pid="28" name="caught2" tags="" position="33,744" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
+
+You didn&#39;t choose fast enough. The alarm went off and guards flooded to find you. 
+
+[[Uh-oh-&gt;caught]]</tw-passagedata><tw-passagedata pid="29" name="wrong password" tags="" position="489,1383" size="100,100">Score: &lt;&lt;print $score&gt;&gt;
+
+You didn&#39;t choose the correct password. The alarm goes off and the guards bust you.
 
 [[return to start-&gt;Start]]</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
