@@ -1,3 +1,3 @@
 # Intro-to-Game-Design
 ## Game Prototype Midterm
-[Click here to play game](jfeinberg32/Intro-to-Game-Design/AlienMidterm.HTML)
+[Click here to play game](https://jfeinberg32.github.io/Intro-to-Game-Design/StormArea51.html)
